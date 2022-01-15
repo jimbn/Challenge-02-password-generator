@@ -17,6 +17,7 @@ var characters = {
   specialCharacters: ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "+", "-", "=", "[", "]", "{", "}", ";", "'", ":", '"', "|", ",", ".", "<", ">", '/', "?"],
 };
 
+// Function to validate if prompt input is a number. Returns false if NaN.
 var validation = function(num) {
   if (Number.isInteger(parseInt(num)) === false) {
     return false;
