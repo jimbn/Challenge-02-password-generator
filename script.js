@@ -4,22 +4,20 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 var generatePassword = function() {
-  
   var passMin = validMin ();
     if (passMin === false) {
       alert("Please only input valid NUMERALS!");
       validMin();
-    }
-  
+    } 
   var passMax = validMax ();
     if (passMax === false) {
       alert("Please only input valid NUMERALS!");
       validMax();
     }  
 
-  // Questionaire to see check of character specification
+  // Series of questions to check for character specification
+  // Alert to notify user if the password will or will not include the characters
   var cLowercase = window.confirm("Do you want your password to include LOWERCASE letters?");
-    // Alert to notify user if the password will or will not include the characters
     if (cLowercase) {
       alert("Your password will include LOWERCASE letters!");
     } else {
@@ -61,10 +59,10 @@ var generatePassword = function() {
       Math.floor(Math.random()*pCharacters.length)
     );
   }
-
   return gPassword;
 }
 
+// Function to run generatePassword() and print password onto the html
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -90,7 +88,7 @@ var validation = function(num) {
   }
 }
 
-// Function to return answer if it is a number. Returns false 
+// Check to return answer if it is a number. Returns false if NaN.
 var validMin = function() {
   var minPrompt = prompt("What is the MINIMUM length of the password (PLEASE ONLY USE NUMERALS)?");
     var isValid = validation (minPrompt);
@@ -100,7 +98,6 @@ var validMin = function() {
       return false;
     }
 }
-
 var validMax = function () {
   var maxPrompt = prompt("What is the MAXIMUM length of the password (PLEASE ONLY USE NUMERALS)?");  
     var isValid = validation (maxPrompt);
