@@ -13,10 +13,10 @@ Once criteria for the password have been selected, the randomized password will 
 ## Built With
 * HTML
 * CSS
-*JS
+* JS
 
 ## Website
-https://jimbn.github.io/Professional-Portfolio/
+https://jimbn.github.io/Challenge-03-password-generator/
 
 ## Contribution
 Jim Nguyen
